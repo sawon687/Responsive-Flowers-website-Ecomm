@@ -9,11 +9,13 @@
   --secondary-color:#8987A1;
 
 }
+body{
+    background-color: #F5F8FF;
+}
+
 .container{
     max-width: 1140px;
     margin: 0 auto;
-    
-   
 }
 .banner-description{
     color:var(--secondary-color);
@@ -22,7 +24,22 @@
 h1,h2,h3,h4{
       font-family: "Noto Serif", serif;
 }
-
+main >section {
+    margin-top: 40px;
+}
+.section-titile{
+    text-align: center;
+      font-size: 3.1rem;
+      font-weight: 700;
+}
+.section-description{
+        width: 62%;
+         font-size: 1.2rem;
+         text-align: center;
+         color: var(--secondary-color);
+         margin: 20px auto;
+         font-weight: 400;
+}
 
 /* navar start */
 .nav-bar{
@@ -51,15 +68,12 @@ h1,h2,h3,h4{
     
 }
 .nav-bar ul li a{
-     text-decoration: none;
-  
-     
+     text-decoration: none;   
 }
 
 .cart-p
 {
-    margin-left: -30px;
-    
+    margin-left: -30px 
 }
 
 .check-cart-fled{
@@ -87,59 +101,98 @@ h1,h2,h3,h4{
 }
 .banner-contain{
 max-width: calc(1140px - 50%);
-
+width: 100%;
+margin-top: 90px;
 
 
 }
 .banner-contain p{
-    max-width: 80%;
-    margin-top: 10px;
+    max-width: 570px;
+    margin-top: 20px;
+    padding: 0 20px
 }
 .banner-titile{
     color: #000000;
     font-size: 4rem;
+     max-width: 570px;
+    padding: 0 20px;
 }
-.banner-titile span {
+.primary-text-color {
     color: var(--primary-color);
     
 }
 
 .banner-img{
 max-width: 50%;
-  margin-top: 10px;
-  
-
-
+margin-top: 10px;
     
 }
-.banner-img > img{
+.banner-img , img{
     display: block;
-    margin-top: 10px;
-    
+    margin-top: 10px; 
+    max-width: 100%;
 }
+       
+/* main start */
+/* our plants section */
+
+.plants-section{
+    margin-top: 140px;
+   
+}
+/* product section */
+.product-card-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+.product-card{
+text-align: center;
+}
+.product-name{
+    font-family: "Inter", sans-serif;
+    margin-top: 20px;
+    font-weight: 500;
+}
+.product-card img{
+    padding: 0 15px;
+    max-width: 100%;
+     
+}
+.price{
+      font-family: "Inter", sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-top: 5px;
+}
+.primary-btn{
+    padding: 10px 70px;
+    border: none;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    font-family: "Inter", sans-serif;
+    margin-top: 10px;
+}
+
 /* media query responsive mobile */
 @media screen and (max-width:576px){
     .banner{
         flex-direction: column-reverse;
     }
-   
     .active , .nav-link{
-        display: none;
+      display: none;
     }
+   
     .nav-bar{
-        justify-content: space-between;
-        padding: 40px;
-        gap: 150px;
-       margin-top: 60px;
         
+        padding: 20px;   
     }
-    
-    .check-cart-fled{
-        margin-left: 120px;
-    
+    .primary-btn{
+        padding: 10px 35px;
     }
-    .banner-contain{
-        
-          padding: 40px;
+    .product-card-container{
+        grid-template-columns: repeat(2,1fr);   
     }
 }
